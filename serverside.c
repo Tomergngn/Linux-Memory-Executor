@@ -62,7 +62,6 @@ int main(int argc, char const* argv[]){
 
     int last_packet = 0;
     while (!last_packet){
-      printf("%d\n", last_packet);
       unsigned char header_buffer[P_LEN + 1];
       if (read(socket, header_buffer, P_LEN + 1) < 0) {
         perror("read");
