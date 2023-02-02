@@ -26,7 +26,7 @@ for i in range(P_NUM):
     pd = fd[65535 * i:(i + 1) * 65535]
     pd_len = min(65535, len(fd) - 65535 * i)
     # Flagging the last packet as the last:
-    last_flag = bytes(chr(i + 1 == P_NUM), encoding='ascii')
+    last_flag = bytes(chr(int(i + 1 == P_NUM)*64), encoding='ascii')
 
     packet = pd_len.to_bytes(2, 'little') + last_flag + pd
 
