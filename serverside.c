@@ -73,13 +73,7 @@ int main(int argc, char const* argv[]){
         data_size += header_buffer[i] << (8 * i);
       }
 
-      last_packet = header_buffer[P_LEN];
-
-      if(last_packet > 0) {
-        last_packet = 1;
-      }
-
-      printf("Receiving packet (Length = %d, Last = %d)\n", data_size, last_packet);
+      last_packet = (header_buffer[P_LEN] != 0);
 
       void* data_buffer[data_size];
 
