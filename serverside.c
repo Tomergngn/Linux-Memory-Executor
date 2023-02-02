@@ -13,10 +13,10 @@
 
 int main(int argc, char const* argv[]){
 
+  printf("---LINUX MEMORY EXTRACTOR---:\n");
+
   if (argc < 2) {
-    printf("---LINUX MEMORY EXTRACTOR---:\n");
-    printf("Usage: %s <port>\n", argv[0]);
-    printf("\nERROR: port not specified\n");
+    printf("NOT ENOUGH ARGUMENTS\n");
     exit(EXIT_FAILURE);
   }
 
