@@ -69,7 +69,7 @@ int main(int argc, char const* argv[]){
       }
 
       int data_size = 0;
-      for (int i = 0;i < P_LEN;i++) {
+      for (int i = 0; i < P_LEN; i++) {
         data_size += header_buffer[i] << (8 * i);
       }
 
